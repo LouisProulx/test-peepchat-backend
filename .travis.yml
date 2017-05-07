@@ -15,3 +15,5 @@ deploy:
   app: evening-coast-66689
   on:
     repo: LouisProulx/test-peepchat-backend
+notifications:
+  email:false
