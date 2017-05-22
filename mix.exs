@@ -19,7 +19,7 @@ defmodule Peepchat.Mixfile do
   def application do
     [mod: {Peepchat, []},
      applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -36,6 +36,9 @@ defmodule Peepchat.Mixfile do
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
+     {:guardian, "~> 0.14"},
+     {:ja_serializer, "~> 0.12.0"},
+     {:comeonin,"~> 3.0"},
      {:cors_plug, "~> 1.2"}]
   end
 
