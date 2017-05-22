@@ -13,7 +13,6 @@ defmodule Peepchat.RegistrationController do
       password_confirmation: password_confirmation,
       password: password}
 
-
     case Repo.insert changeset do
       {:ok, user} ->
         conn

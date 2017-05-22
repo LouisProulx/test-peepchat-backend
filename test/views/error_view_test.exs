@@ -6,16 +6,16 @@ defmodule Peepchat.ErrorViewTest do
 
   test "renders 404.json" do
     assert render(Peepchat.ErrorView, "404.json", []) ==
-           %{errors: %{detail: "Page not found"}}
-  end
+            JaSerializer.ErrorSerializer.format(%{title: "Not Fond", code: 404})
+   end
 
   test "render 500.json" do
     assert render(Peepchat.ErrorView, "500.json", []) ==
-           %{errors: %{detail: "Internal server error"}}
+           JaSerializer.ErrorSerializer.format(%{title: "Internal server error", code: 500})
   end
 
   test "render any other" do
     assert render(Peepchat.ErrorView, "505.json", []) ==
-           %{errors: %{detail: "Internal server error"}}
+           JaSerializer.ErrorSerializer.format(%{title: "Internal server error", code: 500})
   end
 end
