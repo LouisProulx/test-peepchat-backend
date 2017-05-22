@@ -6,7 +6,7 @@ defmodule Peepchat.ErrorViewTest do
 
   test "renders 404.json" do
     assert render(Peepchat.ErrorView, "404.json", []) ==
-            JaSerializer.ErrorSerializer.format(%{title: "Not Fond", code: 404})
+            JaSerializer.ErrorSerializer.format(%{title: "Not Found", code: 404})
    end
 
   test "render 500.json" do
